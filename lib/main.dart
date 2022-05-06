@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shoes_shopping_ui_flutter/categories.dart';
+import 'package:shoes_shopping_ui_flutter/make_item.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,6 +40,35 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ],
+        ),
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 55,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      categoreis(text: "All", selected: true),
+                      categoreis(text: "Sneakers", selected: false),
+                      categoreis(text: "Football", selected: false),
+                      categoreis(text: "Soccer", selected: false),
+                      categoreis(text: "Golf", selected: false),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                makeItem(image: "assets/images/one.jpg"),
+                makeItem(image: "assets/images/two.jpg"),
+                makeItem(image: "assets/images/three.jpg"),
+              ],
+            ),
+          ),
         ),
       ),
     );
