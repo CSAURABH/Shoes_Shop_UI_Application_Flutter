@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-Widget makeItem({image}) {
+Widget makeItem({image, tag, context}) {
   return Container(
     margin: const EdgeInsets.only(bottom: 20.0),
     height: 300,
-    width: double.infinity,
+    // width: double.infinity,
     decoration: BoxDecoration(
       image: DecorationImage(
         image: AssetImage(image),

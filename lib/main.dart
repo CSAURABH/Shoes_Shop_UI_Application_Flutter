@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shoes_shopping_ui_flutter/categories.dart';
-import 'package:shoes_shopping_ui_flutter/make_item.dart';
+import 'package:shoes_shopping_ui_flutter/Components/categories.dart';
+import 'package:shoes_shopping_ui_flutter/Components/make_item.dart';
 
 void main() {
   runApp(const MyApp());
@@ -63,9 +63,18 @@ class MyApp extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                makeItem(image: "assets/images/one.jpg"),
-                makeItem(image: "assets/images/two.jpg"),
-                makeItem(image: "assets/images/three.jpg"),
+                makeItem(
+                    image: "assets/images/one.jpg",
+                    tag: 'red',
+                    context: context),
+                makeItem(
+                    image: "assets/images/two.jpg",
+                    tag: 'blue',
+                    context: context),
+                makeItem(
+                    image: "assets/images/three.jpg",
+                    tag: 'white',
+                    context: context),
               ],
             ),
           ),
